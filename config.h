@@ -45,7 +45,7 @@ static const Rule rules[] =
 	 */
 	/* class      	        instance    title       tags mask       isfloating      monitor */
 	{ "Gimp",     		NULL,	    NULL,	0,		1,		-1 },
-	{ "LibreWolf",  	NULL,       NULL,       1 << 8,		0,		-1 },
+	{ "Firefox",	  	NULL,       NULL,       1 << 8,		0,		-1 },
 	{ "Element", 		NULL,       NULL, 	1 << 1,         0,		-1 },
 	{ "Code - OSS",		NULL,       NULL, 	1 << 2, 	0, 		-1 },
 };
@@ -108,8 +108,9 @@ static Key keys[] =
 	{ MODKEY,                       XK_period,		   focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,		   tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period,		   tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_f,			   spawn,	   SHCMD("~/.local/LibreWolf.x86_64.AppImage") },
+	{ MODKEY|ShiftMask,		XK_f,			   spawn,	   SHCMD("firefox-bin") },
 	{ MODKEY|ShiftMask,		XK_e,			   spawn,	   SHCMD("element-desktop") },
+	{ MODKEY|ShiftMask,             XK_t,			   spawn,          SHCMD("./.scripts/thinkorswim.sh") },
 	{ 0,				XF86XK_AudioRaiseVolume,   spawn,	   SHCMD("amixer set Master 3%+; pkill -RTMIN+10 dwmblocks") },
 	{ 0,				XF86XK_AudioLowerVolume,   spawn,	   SHCMD("amixer set Master 3%-; pkill -RTMIN+10 dwmblocks") },
 	{ 0,				XF86XK_MonBrightnessUp,    spawn,	   SHCMD("xbacklight -inc 10") },
